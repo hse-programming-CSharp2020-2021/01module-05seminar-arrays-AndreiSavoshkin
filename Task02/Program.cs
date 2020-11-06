@@ -17,24 +17,23 @@ namespace Task02
 {
     class Program
     {
+        static ulong[] GetArray(int n)
+        {
+            ulong[] array = new ulong[n];
+            for (var i = 0; i < n; i++)
+            {
+                array[i] = (ulong)Math.Pow(2, i);
+            }
+            return array;
+        }
         static void Main(string[] args)
         {
-            RunTask02();
-        }
-
-        public static void RunTask02()
-        {
-            int N = int.Parse(Console.ReadLine());
-
-            // TODO: инициализируйте массив и передайте его в соответствующий метод
-
-            
-            // TODO: выведите массив на экран
-        }
-
-        static void FillArray()
-        {
-            // TODO: заполните массив соответствующими данными
+            int inputN = int.Parse(Console.ReadLine());
+            ulong[] array = GetArray(inputN);
+            for (var i = 0; i < inputN; i++)
+            {
+                Console.Write($"{array[i]} ");
+            }
         }
     }
 }
