@@ -19,7 +19,7 @@ namespace Task04
 {
     class Program
     {
-        static long[] GetArray(int N, int A, int D)
+        static long[] GetArray(long N, long A, long D)
         {
             long[] array = new long[N];
             for (var i = 0; i < N; i++)
@@ -30,10 +30,10 @@ namespace Task04
         }
         static void Main(string[] args)
         {
-            int N, A, D;
-            N = int.Parse(Console.ReadLine());
-            A = int.Parse(Console.ReadLine());
-            D = int.Parse(Console.ReadLine());
+            long N, A, D;
+            N = long.Parse(Console.ReadLine());
+            A = long.Parse(Console.ReadLine());
+            D = long.Parse(Console.ReadLine());
             long[] array = GetArray(N, A, D);
             for (var i = 0; i < N; i++)
             {
