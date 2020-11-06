@@ -19,9 +19,9 @@ namespace Task04
 {
     class Program
     {
-        static int[] GetArray(int N, int A, int D)
+        static long[] GetArray(int N, int A, int D)
         {
-            int[] array = new int[N];
+            long[] array = new long[N];
             for (var i = 0; i < N; i++)
             {
                 array[i] = A + D * i;
@@ -34,7 +34,7 @@ namespace Task04
             N = int.Parse(Console.ReadLine());
             A = int.Parse(Console.ReadLine());
             D = int.Parse(Console.ReadLine());
-            int[] array = GetArray(N, A, D);
+            long[] array = GetArray(N, A, D);
             for (var i = 0; i < N; i++)
             {
                 Console.Write($"{array[i]} ");

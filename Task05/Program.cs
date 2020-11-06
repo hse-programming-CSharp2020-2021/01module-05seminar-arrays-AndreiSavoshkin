@@ -39,10 +39,6 @@ namespace Task05
             for (var i = N - 1; i >= 0; i--)
             {
                 Console.Write($"{array[i]} ");
-                if ((N - i) % 5 == 0)
-                {
-                    Console.WriteLine("");
-                }
             }
         }
     }
