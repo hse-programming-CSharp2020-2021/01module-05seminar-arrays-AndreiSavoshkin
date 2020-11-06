@@ -38,21 +38,45 @@ namespace Task01
         public static void RunTask01()
         {
             int numOfItems = int.Parse(Console.ReadLine());
-            
-            int[] array;
-            // TODO: считайте массив
 
-            int newValue; // значение, которым нужно заменить все максимальные элементы
-            // TODO: считайте новое значение
-            
+            int[] array = new int[numOfItems];
+            for (int i = 0; i < numOfItems; i++)
+            {
+                array[i] = int.Parse(Console.ReadLine());
+            }
+
+            int newValue = int.Parse(Console.ReadLine()); // значение, которым нужно заменить все максимальные элементы
+
+            foreach (var item in array)
+            {
+                Console.Write($"{item} ");
+            }
+            Console.WriteLine("");
             ReplaceMaxElem(ref array, newValue);
-            
-            // TODO: реализуйте вывод необходимых данных
+
+            foreach (var item in array)
+            {
+                Console.Write($"{item} ");
+            }
         }
 
         static void ReplaceMaxElem(ref int[] arr, int val)
         {
-            // TODO: реализуйте замену всех вхождений максимального элемента массива arr на значение val
+            int maxElem = arr[0];
+            foreach (var item in arr)
+            {
+                if (maxElem < item)
+                {
+                    maxElem = item;
+                }
+            }
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == maxElem)
+                {
+                    arr[i] = val;
+                }
+            }
         }
     }
 }

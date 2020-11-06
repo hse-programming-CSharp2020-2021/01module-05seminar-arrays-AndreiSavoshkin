@@ -19,26 +19,26 @@ namespace Task04
 {
     class Program
     {
+        static int[] GetArray(int N, int A, int D)
+        {
+            int[] array = new int[N];
+            for (var i = 0; i < N; i++)
+            {
+                array[i] = A + D * i;
+            }
+            return array;
+        }
         static void Main(string[] args)
         {
-            RunTask04();
-        }
-
-        public static void RunTask04()
-        {
-            int N = int.Parse(Console.ReadLine());
-
-            int A, D;
-            // TODO: считайте необходимые значения A и D
-            
-            // TODO: инициализируйте массив и передайте его в соответствующий метод вместе с необходимыми значениями 
-            
-            // TODO: выведите массив на экран
-        }
-        
-        static void FillArray()
-        {
-            // TODO: заполните массив соответствующими данными
+            int N, A, D;
+            N = int.Parse(Console.ReadLine());
+            A = int.Parse(Console.ReadLine());
+            D = int.Parse(Console.ReadLine());
+            int[] array = GetArray(N, A, D);
+            for (var i = 0; i < N; i++)
+            {
+                Console.Write($"{array[i]} ");
+            }
         }
     }
 }

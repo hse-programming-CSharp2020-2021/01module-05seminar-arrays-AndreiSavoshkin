@@ -21,18 +21,29 @@ namespace Task05
 {
     class Program
     {
+        static long[] GetArray(int N)
+        {
+            long[] array = new long[N];
+            array[0] = 1;
+            array[1] = 1;
+            for (var i = 2; i < N; i++)
+            {
+                array[i] = array[i - 1] + array[i - 2];
+            }
+            return array;
+        }
         static void Main(string[] args)
         {
-            RunTask05();
-        }
-
-        public static void RunTask05()
-        {
             int N = int.Parse(Console.ReadLine());
-
-            // TODO: объявите массив и вызовите метод для его заполнения
-            
-            // TODO: выведите массив на экран в требуемом порядке
+            long[] array = GetArray(N);
+            for (var i = N - 1; i >= 0; i--)
+            {
+                Console.Write($"{array[i]} ");
+                if ((N - i) % 5 == 0)
+                {
+                    Console.WriteLine("");
+                }
+            }
         }
     }
 }
